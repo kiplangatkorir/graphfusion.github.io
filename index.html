@@ -22,6 +22,7 @@
       width: 85%;
       max-width: 1200px;
       margin: 0 auto;
+      text-align: center; /* Center content */
     }
 
     header {
@@ -171,6 +172,46 @@
       color: #8b949e;
     }
 
+    /* Added Technology Stack Section */
+    .technology-stack {
+      background-color: #161b22;
+      padding: 50px 20px;
+      margin-bottom: 60px;
+    }
+
+    .technology-stack h2 {
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    .tech-content {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tech-content h3 {
+      font-size: 1.8rem;
+      color: #58a6ff;
+      margin-bottom: 15px;
+    }
+
+    .tech-content p {
+      font-size: 1.1rem;
+      color: #8b949e;
+      margin-bottom: 20px;
+    }
+
+    .tech-content ul {
+      color: #8b949e;
+      padding-left: 20px;
+    }
+
+    .tech-content ul li {
+      margin-bottom: 10px;
+    }
+
     .job-card {
       background-color: #161b22;
       padding: 20px;
@@ -295,6 +336,10 @@
       .community-grid {
         flex-direction: column;
       }
+
+      .tech-content {
+        text-align: center; /* Ensure content is centered on smaller screens */
+      }
     }
   </style>
 </head>
@@ -317,7 +362,7 @@
   </header>
 
   <section class="hero container">
-    <h1>Intelligent Knowledge Graphs <span>Powered by AI</span></h1>
+    <h1>Intelligent Knowledge Graphs Powered by <span>AI</span></h1>
     <p>Transform your data into dynamic knowledge graphs with our innovative AI-driven confidence scoring system. Unlock deeper insights and make smarter decisions.</p>
     <div class="cta-buttons">
       <button class="get-started">Get Started</button>
@@ -325,60 +370,37 @@
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- Core Technologies Section -->
   <section class="container">
     <h2 class="section-title">Core Technologies</h2>
     <div class="features">
       <div class="feature-card">
-        <img src="database-icon.png" alt="Database Icon">
-        <h3>Dynamic Knowledge Graphs</h3>
-        <p>Build and maintain evolving knowledge structures that adapt to new information in real-time.</p>
+        <h3>Intelligent Data Structuring</h3>
+        <p>Transform raw data into meaningful knowledge graphs, ensuring accuracy and reliability through AI-driven confidence scoring.</p>
       </div>
       <div class="feature-card">
-        <img src="ai-icon.png" alt="AI Icon">
-        <h3>AI-Powered Analysis</h3>
-        <p>Leverage advanced machine learning algorithms for intelligent data processing and pattern recognition.</p>
+        <h3>Contextual Understanding</h3>
+        <p>Deep contextual awareness improves decision-making, offering insights that adapt as new data arrives.</p>
       </div>
       <div class="feature-card">
-        <img src="shield-icon.png" alt="Shield Icon">
-        <h3>Confidence Scoring</h3>
-        <p>Our unique confidence scoring system ensures that decisions are backed by reliable and trustworthy data.</p>
+        <h3>Transparent Reasoning</h3>
+        <p>See exactly how conclusions are drawn, thanks to explainable AI that shows the reasoning process step by step.</p>
       </div>
     </div>
   </section>
 
-  <!-- Why Join GraphFusion Section -->
-  <section class="container">
-    <h2 class="section-title">Why Join GraphFusion?</h2>
-    <div class="features">
-      <div class="job-card">
-        <h4>For Developers</h4>
-        <p>Join our team and work on cutting-edge knowledge graph and AI technologies. We are looking for passionate developers to help shape the future.</p>
-        <button>Explore Careers</button>
-      </div>
-      <div class="job-card">
-        <h4>For Researchers</h4>
-        <p>Collaborate with us to explore the frontiers of knowledge representation and artificial intelligence. We value innovation and curiosity.</p>
-        <button>Join Research Program</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contributors Section -->
-  <section class="community-section">
+  <!-- Technology Stack Section -->
+  <section class="technology-stack">
     <div class="container">
-      <h2>Join Our Community</h2>
-      <div class="community-grid">
-        <div class="community-item">
-          <h3>Students</h3>
-          <p>Are you a student passionate about AI and graph technologies? Join our internship program and work on real-world projects while learning from industry experts.</p>
-          <button>Apply for Internship</button>
-        </div>
-        <div class="community-item">
-          <h3>Open Source Contributors</h3>
-          <p>Contribute to our open-source projects and help shape the future of knowledge graph technology. Check out our GitHub repositories and join our developer community.</p>
-          <button>View GitHub Projects</button>
-        </div>
+      <h2>Our Technology Stack</h2>
+      <div class="tech-content">
+        <h3>Advanced Graph Architecture</h3>
+        <p>Our system leverages cutting-edge graph database technology combined with proprietary AI algorithms to create a powerful knowledge management platform.</p>
+        <ul>
+          <li>Real-time graph updates and propagation</li>
+          <li>Intelligent relationship inference</li>
+          <li>Dynamic confidence scoring system</li>
+        </ul>
       </div>
     </div>
   </section>
