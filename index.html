@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphFusion - Intelligent Knowledge Graphs</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+        <!-- Hero Section -->
+        <header class="container mx-auto px-6 py-16">
+            <nav class="flex justify-between items-center mb-16">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="network" class="h-8 w-8 text-blue-500"></i>
+                    <span class="text-2xl font-bold">GraphFusion</span>
+                </div>
+                <div class="space-x-8">
+                    <button class="hover:text-blue-400 transition-colors">Solutions</button>
+                    <button class="hover:text-blue-400 transition-colors">Technology</button>
+                    <button class="hover:text-blue-400 transition-colors">About</button>
+                    <button class="hover:text-blue-400 transition-colors">Careers</button>
+                </div>
+            </nav>
+
+            <div class="flex flex-col items-center text-center space-y-8 mt-24">
+                <h1 class="text-6xl font-bold leading-tight">
+                    Intelligent Knowledge Graphs
+                    <span class="block text-blue-500">Powered by AI</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-2xl">
+                    Transform your data into dynamic knowledge graphs with our innovative AI-driven confidence scoring system.
+                    Unlock deeper insights and make smarter decisions.
+                </p>
+                <div class="flex space-x-4 mt-8">
+                    <button class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg flex items-center space-x-2 transition-colors">
+                        <span>Get Started</span>
+                        <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                    </button>
+                    <button class="border border-gray-600 hover:border-blue-500 px-6 py-3 rounded-lg transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section class="container mx-auto px-6 py-24">
+            <h2 class="text-4xl font-bold text-center mb-16">Core Technologies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="featuresGrid">
+                <!-- Feature cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Technology Showcase -->
+        <section class="bg-gray-800 py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">Our Technology Stack</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-blue-500">Advanced Graph Architecture</h3>
+                        <p class="text-gray-300">
+                            Our system leverages cutting-edge graph database technology combined with 
+                            proprietary AI algorithms to create a powerful knowledge management platform.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="arrow-right" class="h-4 w-4 text-blue-500"></i>
+                                <span>Real-time graph updates and propagation</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="arrow-right" class="h-4 w-4 text-blue-500"></i>
+                                <span>Intelligent relationship inference</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i data-lucide="arrow-right" class="h-4 w-4 text-blue-500"></i>
+                                <span>Dynamic confidence scoring system</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 p-8 rounded-lg">
+                        <i data-lucide="network" class="w-full h-64 text-blue-500"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Careers Section -->
+        <section class="container mx-auto px-6 py-24">
+            <h2 class="text-4xl font-bold text-center mb-4">Join Our Team</h2>
+            <p class="text-center text-gray-400 mb-16 text-xl">
+                We're a fully remote company with team members across all time zones
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-blue-500">Open Positions</h3>
+                    <div class="space-y-6" id="jobList">
+                        <!-- Job cards will be dynamically inserted here -->
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-6">Why Join GraphFusion?</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="globe" class="h-6 w-6 text-blue-500 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <span class="font-bold block">True Remote-First Culture</span>
+                                <span class="text-gray-400">Work from anywhere in the world, in your timezone</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="brain" class="h-6 w-6 text-blue-500 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <span class="font-bold block">Cutting-Edge Technology</span>
+                                <span class="text-gray-400">Work on innovative AI and graph technologies</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="users" class="h-6 w-6 text-blue-500 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <span class="font-bold block">Global Team</span>
+                                <span class="text-gray-400">Collaborate with talented individuals worldwide</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mt-8 p-4 bg-gray-700 rounded-lg">
+                        <h4 class="font-bold mb-2">Remote Work Benefits</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Flexible working hours</li>
+                            <li>• Home office setup allowance</li>
+                            <li>• Annual in-person team retreats</li>
+                            <li>• Learning and development budget</li>
+                            <li>• Comprehensive health benefits</li>
+                            <li>• Competitive salary in your local currency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contributors Section -->
+        <section class="bg-gray-800 py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">Join Our Community</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 mb-8">
+                            <i data-lucide="graduation-cap" class="h-12 w-12 text-blue-500"></i>
+                            <h3 class="text-2xl font-bold">Students</h3>
+                        </div>
+                        <p class="text-gray-300">
+                            Are you a student passionate about AI and graph technologies? Join our internship program
+                            and work on real-world projects while learning from industry experts.
+                        </p>
+                        <button class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition-colors">
+                            Apply for Internship
+                        </button>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 mb-8">
+                            <i data-lucide="github" class="h-12 w-12 text-blue-500"></i>
+                            <h3 class="text-2xl font-bold">Open Source Contributors</h3>
+                        </div>
+                        <p class="text-gray-300">
+                            Contribute to our open-source projects and help shape the future of knowledge graph technology.
+                            Check out our GitHub repositories and join our developer community.
+                        </p>
+                        <button class="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors">
+                            View GitHub Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 py-12">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                        <i data-lucide="network" class="h-6 w-6 text-blue-500"></i>
+                        <span class="text-xl font-bold">GraphFusion</span>
+                    </div>
+                    <div class="flex space-x-8">
+                        <a href="#" class="hover:text-blue-500 transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-blue-500 transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:text-blue-500 transition-colors">Documentation</a>
+                    </div>
+                </div>
+                <div class="mt-8 text-center text-gray-500">
+                    © 2024 GraphFusion. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
