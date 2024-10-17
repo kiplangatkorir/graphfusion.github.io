@@ -1,200 +1,285 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GraphFusion - Intelligent Knowledge Graphs</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
-</head>
-<body>
-    <div class="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
-        <!-- Hero Section -->
-        <header class="container mx-auto px-6 py-16">
-            <nav class="flex justify-between items-center mb-16">
-                <div class="flex items-center space-x-2">
-                    <i data-lucide="network" class="h-8 w-8 text-blue-500"></i>
-                    <span class="text-2xl font-bold">GraphFusion</span>
-                </div>
-                <div class="space-x-8">
-                    <button class="hover:text-blue-400 transition-colors">Solutions</button>
-                    <button class="hover:text-blue-400 transition-colors">Technology</button>
-                    <button class="hover:text-blue-400 transition-colors">About</button>
-                    <button class="hover:text-blue-400 transition-colors">Careers</button>
-                </div>
-            </nav>
+convert to html and css; import React from 'react';
+import { 
+  ChevronRight, 
+  Database, 
+  Brain, 
+  Network, 
+  Shield, 
+  Globe, 
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Users,
+  GraduationCap,
+  Briefcase
+} from 'lucide-react';
 
-            <div class="flex flex-col items-center text-center space-y-8 mt-24">
-                <h1 class="text-6xl font-bold leading-tight">
-                    Intelligent Knowledge Graphs
-                    <span class="block text-blue-500">Powered by AI</span>
-                </h1>
-                <p class="text-xl text-gray-400 max-w-2xl">
-                    Transform your data into dynamic knowledge graphs with our innovative AI-driven confidence scoring system.
-                    Unlock deeper insights and make smarter decisions.
-                </p>
-                <div class="flex space-x-4 mt-8">
-                    <button class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg flex items-center space-x-2 transition-colors">
-                        <span>Get Started</span>
-                        <i data-lucide="chevron-right" class="h-4 w-4"></i>
-                    </button>
-                    <button class="border border-gray-600 hover:border-blue-500 px-6 py-3 rounded-lg transition-colors">
-                        Learn More
-                    </button>
-                </div>
-            </div>
-        </header>
+const FeatureCard = ({ icon, title, description }) => (
+  <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+    <div className="mb-4">{icon}</div>
+    <h3 className="text-xl font-bold mb-2">{title}</h3>
+    <p className="text-gray-400">{description}</p>
+  </div>
+);
 
-        <!-- Features Section -->
-        <section class="container mx-auto px-6 py-24">
-            <h2 class="text-4xl font-bold text-center mb-16">Core Technologies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="featuresGrid">
-                <!-- Feature cards will be dynamically inserted here -->
-            </div>
-        </section>
-
-        <!-- Technology Showcase -->
-        <section class="bg-gray-800 py-24">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-16">Our Technology Stack</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-bold text-blue-500">Advanced Graph Architecture</h3>
-                        <p class="text-gray-300">
-                            Our system leverages cutting-edge graph database technology combined with 
-                            proprietary AI algorithms to create a powerful knowledge management platform.
-                        </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-center space-x-2">
-                                <i data-lucide="arrow-right" class="h-4 w-4 text-blue-500"></i>
-                                <span>Real-time graph updates and propagation</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i data-lucide="arrow-right" class="h-4 w-4 text-blue-500"></i>
-                                <span>Intelligent relationship inference</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i data-lucide="arrow-right" class="h-4 w-4 text-blue-500"></i>
-                                <span>Dynamic confidence scoring system</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bg-gray-700 p-8 rounded-lg">
-                        <i data-lucide="network" class="w-full h-64 text-blue-500"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Careers Section -->
-        <section class="container mx-auto px-6 py-24">
-            <h2 class="text-4xl font-bold text-center mb-4">Join Our Team</h2>
-            <p class="text-center text-gray-400 mb-16 text-xl">
-                We're a fully remote company with team members across all time zones
-            </p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <h3 class="text-2xl font-bold text-blue-500">Open Positions</h3>
-                    <div class="space-y-6" id="jobList">
-                        <!-- Job cards will be dynamically inserted here -->
-                    </div>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-6">Why Join GraphFusion?</h3>
-                    <ul class="space-y-6">
-                        <li class="flex items-start space-x-3">
-                            <i data-lucide="globe" class="h-6 w-6 text-blue-500 flex-shrink-0 mt-1"></i>
-                            <div>
-                                <span class="font-bold block">True Remote-First Culture</span>
-                                <span class="text-gray-400">Work from anywhere in the world, in your timezone</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i data-lucide="brain" class="h-6 w-6 text-blue-500 flex-shrink-0 mt-1"></i>
-                            <div>
-                                <span class="font-bold block">Cutting-Edge Technology</span>
-                                <span class="text-gray-400">Work on innovative AI and graph technologies</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i data-lucide="users" class="h-6 w-6 text-blue-500 flex-shrink-0 mt-1"></i>
-                            <div>
-                                <span class="font-bold block">Global Team</span>
-                                <span class="text-gray-400">Collaborate with talented individuals worldwide</span>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="mt-8 p-4 bg-gray-700 rounded-lg">
-                        <h4 class="font-bold mb-2">Remote Work Benefits</h4>
-                        <ul class="space-y-2 text-gray-300">
-                            <li>• Flexible working hours</li>
-                            <li>• Home office setup allowance</li>
-                            <li>• Annual in-person team retreats</li>
-                            <li>• Learning and development budget</li>
-                            <li>• Comprehensive health benefits</li>
-                            <li>• Competitive salary in your local currency</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contributors Section -->
-        <section class="bg-gray-800 py-24">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-16">Join Our Community</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4 mb-8">
-                            <i data-lucide="graduation-cap" class="h-12 w-12 text-blue-500"></i>
-                            <h3 class="text-2xl font-bold">Students</h3>
-                        </div>
-                        <p class="text-gray-300">
-                            Are you a student passionate about AI and graph technologies? Join our internship program
-                            and work on real-world projects while learning from industry experts.
-                        </p>
-                        <button class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition-colors">
-                            Apply for Internship
-                        </button>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4 mb-8">
-                            <i data-lucide="github" class="h-12 w-12 text-blue-500"></i>
-                            <h3 class="text-2xl font-bold">Open Source Contributors</h3>
-                        </div>
-                        <p class="text-gray-300">
-                            Contribute to our open-source projects and help shape the future of knowledge graph technology.
-                            Check out our GitHub repositories and join our developer community.
-                        </p>
-                        <button class="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors">
-                            View GitHub Projects
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-gray-900 py-12">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="flex items-center space-x-2 mb-4 md:mb-0">
-                        <i data-lucide="network" class="h-6 w-6 text-blue-500"></i>
-                        <span class="text-xl font-bold">GraphFusion</span>
-                    </div>
-                    <div class="flex space-x-8">
-                        <a href="#" class="hover:text-blue-500 transition-colors">Privacy Policy</a>
-                        <a href="#" class="hover:text-blue-500 transition-colors">Terms of Service</a>
-                        <a href="#" class="hover:text-blue-500 transition-colors">Documentation</a>
-                    </div>
-                </div>
-                <div class="mt-8 text-center text-gray-500">
-                    © 2024 GraphFusion. All rights reserved.
-                </div>
-            </div>
-        </footer>
+const JobCard = ({ title, location, type, description, timezone }) => (
+  <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+    <div className="flex flex-col space-y-4">
+      <div className="flex justify-between items-start">
+        <h4 className="text-xl font-bold">{title}</h4>
+        <button className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg transition-colors text-sm">
+          Apply Now
+        </button>
+      </div>
+      <p className="text-gray-400">{description}</p>
+      <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+        <span className="flex items-center space-x-1">
+          <MapPin className="h-4 w-4" />
+          <span>{location}</span>
+        </span>
+        <span className="flex items-center space-x-1">
+          <Briefcase className="h-4 w-4" />
+          <span>{type}</span>
+        </span>
+        <span className="flex items-center space-x-1">
+          <Globe className="h-4 w-4" />
+          <span>{timezone}</span>
+        </span>
+      </div>
     </div>
+  </div>
+);
 
-    <script src="script.js"></script>
-</body>
-</html>
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      {/* Hero Section */}
+      <header className="container mx-auto px-6 py-16">
+        <nav className="flex justify-between items-center mb-16">
+          <div className="flex items-center space-x-2">
+            <Network className="h-8 w-8 text-blue-500" />
+            <span className="text-2xl font-bold">GraphFusion</span>
+          </div>
+          <div className="space-x-8">
+            <button className="hover:text-blue-400 transition-colors">Solutions</button>
+            <button className="hover:text-blue-400 transition-colors">Technology</button>
+            <button className="hover:text-blue-400 transition-colors">About</button>
+            <button className="hover:text-blue-400 transition-colors">Careers</button>
+          </div>
+        </nav>
+
+        <div className="flex flex-col items-center text-center space-y-8 mt-24">
+          <h1 className="text-6xl font-bold leading-tight">
+            Intelligent Knowledge Graphs
+            <span className="block text-blue-500">Powered by AI</span>
+          </h1>
+          <p className="text-xl text-gray-400 max-w-2xl">
+            Transform your data into dynamic knowledge graphs with our innovative AI-driven confidence scoring system.
+            Unlock deeper insights and make smarter decisions.
+          </p>
+          <div className="flex space-x-4 mt-8">
+            <button className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg flex items-center space-x-2 transition-colors">
+              <span>Get Started</span>
+              <ChevronRight className="h-4 w-4" />
+            </button>
+            <button className="border border-gray-600 hover:border-blue-500 px-6 py-3 rounded-lg transition-colors">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Features Section */}
+      <section className="container mx-auto px-6 py-24">
+        <h2 className="text-4xl font-bold text-center mb-16">Core Technologies</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <FeatureCard
+            icon={<Database className="h-8 w-8 text-blue-500" />}
+            title="Dynamic Knowledge Graphs"
+            description="Build and maintain evolving knowledge structures that adapt to new information in real-time."
+          />
+          <FeatureCard
+            icon={<Brain className="h-8 w-8 text-blue-500" />}
+            title="AI-Powered Analysis"
+            description="Leverage advanced machine learning algorithms for intelligent data processing and pattern recognition."
+          />
+          <FeatureCard
+            icon={<Shield className="h-8 w-8 text-blue-500" />}
+            title="Confidence Scoring"
+            description="Our unique confidence scoring system ensures reliable and trustworthy knowledge representation."
+          />
+        </div>
+      </section>
+
+      {/* Technology Showcase */}
+      <section className="bg-gray-800 py-24">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">Our Technology Stack</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-blue-500">Advanced Graph Architecture</h3>
+              <p className="text-gray-300">
+                Our system leverages cutting-edge graph database technology combined with 
+                proprietary AI algorithms to create a powerful knowledge management platform.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-center space-x-2">
+                  <ArrowRight className="h-4 w-4 text-blue-500" />
+                  <span>Real-time graph updates and propagation</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <ArrowRight className="h-4 w-4 text-blue-500" />
+                  <span>Intelligent relationship inference</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <ArrowRight className="h-4 w-4 text-blue-500" />
+                  <span>Dynamic confidence scoring system</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gray-700 p-8 rounded-lg">
+              <Network className="w-full h-64 text-blue-500" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Careers Section */}
+      <section className="container mx-auto px-6 py-24">
+        <h2 className="text-4xl font-bold text-center mb-4">Join Our Team</h2>
+        <p className="text-center text-gray-400 mb-16 text-xl">
+          We're a fully remote company with team members across all time zones
+        </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold text-blue-500">Open Positions</h3>
+            <div className="space-y-6">
+              <JobCard
+                title="Senior Graph Database Engineer"
+                location="Remote Worldwide"
+                type="Full-time"
+                description="Help build our next-generation graph database engine and scaling solutions."
+                timezone="Any timezone"
+              />
+              <JobCard
+                title="AI/ML Research Scientist"
+                location="Remote Worldwide"
+                type="Full-time"
+                description="Research and implement novel approaches to knowledge graph construction and confidence scoring."
+                timezone="Any timezone"
+              />
+              <JobCard
+                title="Frontend Developer"
+                location="Remote Worldwide"
+                type="Full-time"
+                description="Create intuitive interfaces for complex graph visualization and interaction."
+                timezone="Any timezone"
+              />
+              <JobCard
+                title="DevOps Engineer"
+                location="Remote Worldwide"
+                type="Full-time"
+                description="Build and maintain our cloud infrastructure and deployment pipelines."
+                timezone="Any timezone"
+              />
+            </div>
+          </div>
+          <div className="bg-gray-800 p-8 rounded-lg">
+            <h3 className="text-2xl font-bold mb-6">Why Join GraphFusion?</h3>
+            <ul className="space-y-6">
+              <li className="flex items-start space-x-3">
+                <Globe className="h-6 w-6 text-blue-500 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-bold block">True Remote-First Culture</span>
+                  <span className="text-gray-400">Work from anywhere in the world, in your timezone</span>
+                </div>
+              </li>
+              <li className="flex items-start space-x-3">
+                <Brain className="h-6 w-6 text-blue-500 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-bold block">Cutting-Edge Technology</span>
+                  <span className="text-gray-400">Work on innovative AI and graph technologies</span>
+                </div>
+              </li>
+              <li className="flex items-start space-x-3">
+                <Users className="h-6 w-6 text-blue-500 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-bold block">Global Team</span>
+                  <span className="text-gray-400">Collaborate with talented individuals worldwide</span>
+                </div>
+              </li>
+            </ul>
+            <div className="mt-8 p-4 bg-gray-700 rounded-lg">
+              <h4 className="font-bold mb-2">Remote Work Benefits</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Flexible working hours</li>
+                <li>• Home office setup allowance</li>
+                <li>• Annual in-person team retreats</li>
+                <li>• Learning and development budget</li>
+                <li>• Comprehensive health benefits</li>
+                <li>• Competitive salary in your local currency</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contributors Section */}
+      <section className="bg-gray-800 py-24">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">Join Our Community</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4 mb-8">
+                <GraduationCap className="h-12 w-12 text-blue-500" />
+                <h3 className="text-2xl font-bold">Students</h3>
+              </div>
+              <p className="text-gray-300">
+                Are you a student passionate about AI and graph technologies? Join our internship program
+                and work on real-world projects while learning from industry experts.
+              </p>
+              <button className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition-colors">
+                Apply for Internship
+              </button>
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4 mb-8">
+                <Github className="h-12 w-12 text-blue-500" />
+                <h3 className="text-2xl font-bold">Open Source Contributors</h3>
+              </div>
+              <p className="text-gray-300">
+                Contribute to our open-source projects and help shape the future of knowledge graph technology.
+                Check out our GitHub repositories and join our developer community.
+              </p>
+              <button className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors">
+                View GitHub Projects
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 py-12">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <Network className="h-6 w-6 text-blue-500" />
+              <span className="text-xl font-bold">GraphFusion</span>
+            </div>
+            <div className="flex space-x-8">
+              <a href="#" className="hover:text-blue-500 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-blue-500 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-blue-500 transition-colors">Documentation</a>
+            </div>
+          </div>
+          <div className="mt-8 text-center text-gray-500">
+            © 2024 GraphFusion. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
