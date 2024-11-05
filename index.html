@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GraphFusion Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center; /* Center content */
+    }
+
+    header {
+      padding: 20px 0;
+      background-color: #161b22;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    nav .logo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    nav .logo span {
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 10px;
+      color: #58a6ff;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav .nav-links button {
+      background: none;
+      border: none;
+      color: #c9d1d9;
+      font-size: 16px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-links button:hover {
+      color: #58a6ff;
+    }
+
+    .hero {
+      text-align: center;
+      margin: 80px 0;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .hero h1 span {
+      color: #58a6ff;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 20px auto 40px;
+      font-size: 1.1rem;
+      color: #8b949e;
+    }
+
+    .hero .cta-buttons {
+      margin-top: 20px;
+    }
+
+    .hero .cta-buttons button {
+      padding: 12px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .get-started {
+      background-color: #58a6ff;
+      border: none;
+      color: #ffffff;
+    }
+
+    .hero .get-started:hover {
+      background-color: #1f6feb;
+    }
+
+    .hero .learn-more {
+      background-color: transparent;
+      border: 2px solid #8b949e;
+      color: #ffffff;
+    }
+
+    .hero .learn-more:hover {
+      border-color: #58a6ff;
+      color: #58a6ff;
+    }
+
+        /* Add new styles for the Microsoft badge section */
+        .ms-badge-section {
+      background-color: #ffffff;
+      padding: 40px 0;
+      margin: 60px 0;
+      border-radius: 10px;
+    }
+
+    .ms-badge-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .ms-badge-container img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    .ms-badge-text {
+      color: #0d1117;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .ms-badge-text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #1f242b;
+    }
+
+    .ms-badge-text p {
+      font-size: 1.1rem;
+      color: #4a4a4a;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #ffffff;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .feature-card {
+      background-color: #161b22;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      flex: 1;
+      min-width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #58a6ff;
+    }
+
+    .feature-card p {
+      color: #8b949e;
+    }
+
+    /* Added Technology Stack Section */
+    .technology-stack {
+      background-color: #161b22;
+      padding: 50px 20px;
+      margin-bottom: 60px;
+    }
+
+    .technology-stack h2 {
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    .tech-content {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tech-content h3 {
+      font-size: 1.8rem;
+      color: #58a6ff;
+      margin-bottom: 15px;
+    }
+
+    .tech-content p {
+      font-size: 1.1rem;
+      color: #8b949e;
+      margin-bottom: 20px;
+    }
+
+    .tech-content ul {
+      color: #8b949e;
+      padding-left: 20px;
+    }
+
+    .tech-content ul li {
+      margin-bottom: 10px;
+    }
+
+    .job-card {
+      background-color: #161b22;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .job-card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .job-card p {
+      margin-bottom: 15px;
+      color: #8b949e;
+    }
+
+    .job-card button {
+      padding: 10px 20px;
+      background-color: #58a6ff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .job-card button:hover {
+      background-color: #1f6feb;
+    }
+
+    /* Contributors Section */
+    .community-section {
+      background-color: #161b22;
+      padding: 80px 0;
+    }
+
+    .community-section h2 {
+      color: #ffffff;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .community-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .community-item {
+      flex: 1;
+      min-width: 280px;
+      background-color: #1f242b;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .community-item h3 {
+      color: #58a6ff;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .community-item p {
+      color: #8b949e;
+      margin-bottom: 15px;
+    }
+
+    .community-item button {
+      background-color: #58a6ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .community-item button:hover {
+      background-color: #1f6feb;
+    }
+
+    footer {
+      background-color: #161b22;
+      padding: 40px 0;
+      text-align: center;
+      color: #8b949e;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    footer .footer-links a {
+      color: #8b949e;
+      transition: color 0.3s ease;
+    }
+
+    footer .footer-links a:hover {
+      color: #58a6ff;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .features {
+        flex-direction: column;
+      }
+
+      .community-grid {
+        flex-direction: column;
+      }
+
+      .tech-content {
+        text-align: center; /* Ensure content is centered on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="container">
+    <nav>
+      <div class="logo">
+        <img src="network-icon.png" alt="Network Icon">
+        <span>GraphFusion</span>
+      </div>
+      <div class="nav-links">
+        <button>Solutions</button>
+        <button>Technology</button>
+        <button>About</button>
+        <button>Careers</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <h1>Intelligent Knowledge Graphs Powered by <span>AI</span></h1>
+    <p>Transform your data into dynamic knowledge graphs with our innovative AI-driven confidence scoring system. Unlock deeper insights and make smarter decisions.</p>
+    <div class="cta-buttons">
+      <button class="get-started">Get Started</button>
+      <button class="learn-more">Learn More</button>
+    </div>
+  </section>
+
+    <!-- Add Microsoft Badge Section after hero -->
+    <section class="ms-badge-section container">
+      <div class="ms-badge-container">
+        <img src="https://placeholder-for-microsoft-badge.png" alt="Microsoft for Startups Badge">
+        <div class="ms-badge-text">
+          <h2>Proud Microsoft for Startups Partner</h2>
+          <p>As a Microsoft for Startups partner, we leverage enterprise-grade technology to deliver innovative solutions to our customers.</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- Core Technologies Section -->
+  <section class="container">
+    <h2 class="section-title">Core Technologies</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Intelligent Data Structuring</h3>
+        <p>Transform raw data into meaningful knowledge graphs, ensuring accuracy and reliability through AI-driven confidence scoring.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Contextual Understanding</h3>
+        <p>Deep contextual awareness improves decision-making, offering insights that adapt as new data arrives.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Transparent Reasoning</h3>
+        <p>See exactly how conclusions are drawn, thanks to explainable AI that shows the reasoning process step by step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack Section -->
+  <section class="technology-stack">
+    <div class="container">
+      <h2>Our Technology Stack</h2>
+      <div class="tech-content">
+        <h3>Advanced Graph Architecture</h3>
+        <p>Our system leverages cutting-edge graph database technology combined with proprietary AI algorithms to create a powerful knowledge management platform.</p>
+        <ul>
+          <li>Real-time graph updates and propagation</li>
+          <li>Intelligent relationship inference</li>
+          <li>Dynamic confidence scoring system</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <!-- Why Join GraphFusion Section -->
+    <section class="container">
+        <h2 class="section-title">Why Join GraphFusion?</h2>
+        <div class="features">
+          <div class="job-card">
+            <h4>For Developers</h4>
+            <p>Join our team and work on cutting-edge knowledge graph and AI technologies. We are looking for passionate developers to help shape the future.</p>
+            <button>Explore Careers</button>
+          </div>
+          <div class="job-card">
+            <h4>For Researchers</h4>
+            <p>Collaborate with us to explore the frontiers of knowledge representation and artificial intelligence. We value innovation and curiosity.</p>
+            <button>Join Research Program</button>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Contributors Section -->
+      <section class="community-section">
+        <div class="container">
+          <h2>Join Our Community</h2>
+          <div class="community-grid">
+            <div class="community-item">
+              <h3>Students</h3>
+              <p>Are you a student passionate about AI and graph technologies? Join our internship program and work on real-world projects while learning from industry experts.</p>
+              <button>Apply for Internship</button>
+            </div>
+            <div class="community-item">
+              <h3>Open Source Contributors</h3>
+              <p>Contribute to our open-source projects and help shape the future of knowledge graph technology. Check out our GitHub repositories and join our developer community.</p>
+              <button>View GitHub Projects</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 GraphFusion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Documentation</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
